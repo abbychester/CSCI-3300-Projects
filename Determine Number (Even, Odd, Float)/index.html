@@ -1,0 +1,48 @@
+<!--
+Abby Chester
+CSCI 3300 
+29 September 2022
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Abby's Even, Odd, Float, or None of the Above</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function getType() {
+            let input = document.getElementById("input").value;
+            if (isNaN(input)) {
+                document.getElementById("results").innerHTML = "This is not a number";
+            } else if (input % 2 == 0) {
+                document.getElementById("results").innerHTML = "The number [" + input + "] is even.";
+            } else if ((input % 1 != 0)) {
+                document.getElementById("results").innerHTML = "The number [" + input + "] is a float number.";
+            } else {
+                document.getElementById("results").innerHTML = "The number [" + input + "] is odd.";
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Abby's Even, Odd, Float, or None of the Above</h1>
+    </header>
+    <br><br>
+
+    <label>Enter Anything:</label>
+    <input type="text" name="input" id="input">
+    <br><br>
+
+    <button onclick="getType()">Determine the type of number</button>
+    <br><br>
+    <div id="results"></div>
+
+    <footer>&copy; 2022 Abby Chester</footer>
+</body>
+
+</html>

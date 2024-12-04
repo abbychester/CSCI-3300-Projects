@@ -1,0 +1,39 @@
+<!--Abby Chester
+CSCI 3300
+20 October 2022-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Abby Chester's Secret Message Program</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function getSecretMessage() {
+            let message = prompt("Enter a password");
+
+            while (message != "coffee") {
+                message = prompt("You did not guess correclty. Try again.");
+            } document.getElementById("results").innerHTML = "<h1>You guessed correctly! Enjoy some coffee!</h1>" + '<img src="images/coffee.jpg" width="500" height="300">';
+
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Abby Chester's Secret Message Program</h1>
+    </header>
+
+    <button onclick="getSecretMessage()">Click here to view the secret message</button>
+    <br><br>
+    <div id="results"></div>
+    <br><br>
+    <footer>&copy; 2022 Abby Chester</footer>
+</body>
+
+</html>

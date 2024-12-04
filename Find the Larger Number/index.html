@@ -1,0 +1,62 @@
+<!--
+Abby Chester
+CSCI 3300 
+29 September 2022
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Abby's Larger of Three Numbers</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    function getLargest() {
+
+      let first = document.getElementById("first").value;
+      let second = document.getElementById("second").value;
+      let third = document.getElementById("third").value;
+
+      let largest = Math.max(first, second, third);
+
+      if (first == largest)
+        document.getElementById("results").innerHTML =
+          "The first number [" + largest + "] is the largest.";
+      else if (second == largest)
+        document.getElementById("results").innerHTML =
+          "The second number [" + largest + "] is the largest.";
+      else if (third == largest)
+        document.getElementById("results").innerHTML =
+          "The third number [" + largest + "] is the largest.";
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1>Abby's Larger of Three Numbers</h1>
+  </header>
+  <hr>
+
+  <label>Enter the first number:</label>
+  <input type="text" name="first" id="first">
+  <br><br>
+
+  <label>Enter the second number:</label>
+  <input type="text" name="second" id="second">
+  <br><br>
+
+  <label>Enter the third number:</label>
+  <input type="text" name="third" id="third">
+  <br><br>
+
+  <button onclick="getLargest()">Click to see results</button>
+  <br><br>
+
+  <div id="results"></div>
+
+  <footer>&copy; 2022 Abby Chester</footer>
+</body>
+
+</html>

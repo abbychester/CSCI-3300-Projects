@@ -1,0 +1,94 @@
+<!--Abby Chester
+CSCI 3300
+10 November 2022-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Abby Chester's Point of Sale System </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        let products = ["Umbrella", "Rain Coat", "Swimsuit"];
+        let p;
+        let prices = [14.99, 119.99, 40.00];
+        let quantity;
+        let totalforProducts;
+        let index;
+        let totalPrice = [];
+        let sum;
+
+        function getProducts() {
+            let selectedProduct = document.getElementById("products");
+            p = selectedProduct.options[selectedProduct.selectedIndex].text;
+            products = ["Umbrella", "Rain Coat", "Swimsuit"];
+            prices = [14.99, 119.99, 40.00];
+            quantity = document.myform.quantity.value;
+            quantity = parseFloat(quantity);
+            index = products.indexOf(p);
+
+
+            if (index >= 0) {
+                prices = prices[index];
+                prices = parseFloat(prices);
+                totalforProducts = quantity * prices;
+                totalforProducts = parseFloat(totalforProducts);
+
+            }
+            document.getElementById("results").innerHTML = `<br><br><b>${p}</b> (Quantity ${quantity}) Cost: $${totalforProducts.toFixed(2)}.`;
+            totalPrice.push(parseFloat(totalforProducts));
+            sum = findTotalPrice(sum);
+            document.getElementById("results2").innerHTML = `<br><br><b>Total Price: $${sum.toFixed(2)}</b>`;
+
+        }
+        function findTotalPrice() {
+            sum = totalPrice[0];
+            for (let i = 1; i < totalPrice.length; i++) {
+                sum += totalPrice[i];
+            } return sum;
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Abby Chester's Point of Sale System</h1>
+    </header>
+
+    <p>This is the point of sale program for a store selling spring clothes.</p>
+
+    <ul>
+        <li>Product 1: An umbrella cost <b>$14.99</b>.<br></li>
+        <li>Product 2: A rain coat costs <b>$119.99</b>.<br></li>
+        <li>Product 3: A swimsuit cost <b>$40.00</b>.<br></li>
+    </ul>
+
+    <form name="myform" action="javascript:getProducts()">
+
+        <label>Select the item:</label>
+        <select id="products">
+            <option value="Umbrella">Umbrella</option>
+            <option value="Rain Coat">Rain Coat</option>
+            <option value="Swimsuit">Swimsuit</option>
+        </select>
+        <br><br>
+
+        <label>Enter the quantity:</label>
+        <input type="text" name="quantity">
+        <br><br>
+
+        <button id="submit">Add Item</button>
+
+    </form>
+
+    <div id="results"></div>
+    <div id="results2"></div>
+
+    <br><br>
+    <footer>&copy; 2022 Abby Chester</footer>
+</body>
+
+</html>

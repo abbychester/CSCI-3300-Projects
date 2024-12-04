@@ -1,0 +1,49 @@
+<!--Abby Chester
+CSCI 3300
+20 October 2022-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Abby Chester's Dog and Cat Counter</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function getCount() {
+            let catCount = 0;
+            let dogCount = 0;
+            let element = "";
+
+            do {
+                element = prompt("Enter a word to count");
+
+                if (element.includes("cat")) {
+                    catCount++;
+                } if (element.includes("dog")) {
+                    dogCount++;
+                }
+            } while (element != "done");
+
+            document.getElementById("results").innerHTML = "You type cat " + catCount + " time(s) and dog " + dogCount + " time(s).";
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Abby Chester's Dog and Cat Counter</h1>
+    </header>
+
+    <button onclick="getCount()">Click to start Counter</button>
+    <br><br>
+    <div id="results"></div>
+    <br><br>
+    <footer>&copy; 2022 Abby Chester</footer>
+</body>
+
+</html>

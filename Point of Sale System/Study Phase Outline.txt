@@ -1,0 +1,75 @@
+Study Phase Outline 
+
+performace opportunities - 
+
+< There is no formal online system for Happy Paws 
+> Employees take too long writing things down...lost of productivity...
+
+>Sometimes theres a miscommunication on certain things leading to overbooked rooms which leads to unhappy customers
+
+> Not all employees may know what their daily tasks are leading for more miscommunication and lack of productivity in the business 
+
+OPPORTUNITIES - 
+
+< Create a working system that 
+	< has a database that digitally stores client and dog information 
+	< is easily accessible for employees to use 
+	< has a website for clients to use and book online 
+
+
+
+
+information oppourtunities - 
+>Current booking system is impractical and disorganized as it just consists of clients making a call or text to owners through Facebook page or personal numbers. 
+
+>Employees have forgotten to write down client and dog information
+
+> Important information regarding clients personal data has been lost because of a lack of a formal system 
+
+> Finding dog info can be hard 
+
+> Keeping client records updated is difficult because original data has to be thrown away and then written again to keep track of updated info
+
+OPPORTUNITIES - 
+
+< create a working system that 
+	> stores all information in one location that is organized 
+	> allows employees to have easy access updating client information if needed
+
+
+
+
+
+economic opportunities - 
+
+
+
+
+control opportunities - 
+
+> Information is stored in binders that aren't secure 
+> Manual system leads to client and dog recods not being secure 
+> Records have been thrown away and misplaced 
+
+OPPORTUNITIES- 
+
+< All client information will be stored in one secure location 
+< Employees will have to login to see information 
+
+
+
+
+effiency opportunities - 
+
+
+
+service opportunities - 
+
+< Happy Paws currently has a haphazard system 
+> Impractical since all records are hand written
+> If records are lost or misplaced, there is no way to salvage them 
+
+OPPORTUNITIES - 
+
+>Implement a system that would have an area for mistakenly deleted records 
+>Implement a system that is completely automated

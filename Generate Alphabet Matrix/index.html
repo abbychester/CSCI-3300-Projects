@@ -1,0 +1,58 @@
+<!--
+Abby Chester
+CSCI 3300 
+27 October 2022
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Abby Chester's The Letter Mix</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function generateMatrix() {
+            let rows = document.myform.rows.value;
+            let cols = document.myform.cols.value;
+            let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            let script = "";
+            let k = 0;
+            for (let i = 0; i <= (rows - 1); i++) {
+                for (let j = 0; j <= (cols - 1); j++) {
+                    
+                    script += "&nbsp" + letters.charAt(k % 26);
+                    k += 1;
+                }   script += "<br>";
+
+            }
+            document.getElementById("results").innerHTML = script;
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Abby Chester's The Letter Matrix</h1>
+    </header>
+
+    <form name="myform" action="javascript:generateMatrix();">
+
+        <label><b>Rows:</b></label>
+        <input type="number" name="rows"><br>
+        <br><br>
+        <label><b>Columns:</b></label>
+        <input type="number" name="cols">
+        <br><br>
+        <button id="submit">Generate Alphabet Matrix</button>
+
+    </form>
+
+    <pre id="results"></pre>
+    <br><br>
+    <footer>&copy; 2022 Abby Chester</footer>
+
+</body>
+
+</html>

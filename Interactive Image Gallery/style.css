@@ -1,0 +1,57 @@
+body{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: gray;
+}
+
+h1, h2{
+    font-family: 'Caveat', cursive;
+    width: 100%;
+    text-align: center;
+}
+header{
+    border-radius: 20px;
+    border: 2px solid white;
+    background-image: linear-gradient(rgb(17, 73, 47), rgb(156, 156, 152));;
+    margin: 5px;
+    width: 100%;
+}
+ul{
+    list-style-type:none;
+    display: flex;
+    justify-content: space-around;
+}
+
+main{
+    border-radius: 20px;
+    margin: 5px;
+}
+#gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.galleryimage{
+    padding: 3px;
+    border: 1px solid black;
+    margin: 1px;
+}
+
+aside{
+    border-radius: 20px;
+    margin: 5px;
+}
+img:hover{
+    transform: rotate(5deg);
+    border-color: black;
+}
+a:visited{
+    color: white;
+}
+
+footer{
+    border-radius: 20px;
+    margin: 5px;
+}

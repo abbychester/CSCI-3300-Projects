@@ -1,0 +1,129 @@
+<!--Abby Chester
+CSCI 3300
+10 November 2022-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Abby Chester'sOlympic Judging Calculator </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        let judgeValues = [];
+        let smallest;
+        let largest;
+        let sum;
+        let unbiasedAverage;
+
+        function getValues() {
+
+            let judgeA = document.myform.judgeA.value;
+            judgeA = parseInt(judgeA);
+            let judgeB = document.myform.judgeB.value;
+            judgeB = parseInt(judgeB);
+            let judgeC = document.myform.judgeC.value;
+            judgeC = parseInt(judgeC);
+            let judgeD = document.myform.judgeD.value;
+            judgeD = parseInt(judgeD);
+            let judgeE = document.myform.judgeE.value;
+            judgeE = parseInt(judgeE);
+            let judgeF = document.myform.judgeF.value;
+            judgeF = parseInt(judgeF);
+            let judgeG = document.myform.judgeG.value;
+            judgeG = parseInt(judgeG);
+            let judgeH = document.myform.judgeH.value;
+            judgeH = parseInt(judgeH);
+
+            judgeValues = [judgeA, judgeB, judgeC, judgeD, judgeE, judgeF, judgeG, judgeH];
+
+            return judgeValues;
+
+        }
+        function getSmallestValue(judgeValues) {
+            smallest = judgeValues[0];
+            for (let i = 1; i <= judgeValues.length; i++) {
+
+                if (judgeValues[i] < smallest) {
+                    smallest = judgeValues[i];
+                }
+
+            } return smallest;
+        }
+        function getLargestValue(judgeValues) {
+            largest = judgeValues[0];
+            for (let i = 1; i <= judgeValues.length; i++) {
+
+                if (largest < judgeValues[i]) {
+                    largest = judgeValues[i];
+                }
+            } return largest;
+        }
+        function getSum() {
+            sum = judgeValues[0];
+            for (let i = 1; i < judgeValues.length; i++) {
+                sum += judgeValues[i];
+            } return sum;
+        }
+        function getUnbiasedAverage() {
+            judgeValues = getValues(judgeValues);
+            largest = getLargestValue(judgeValues);
+            smallest = getSmallestValue(judgeValues);
+            sum = getSum(judgeValues);
+            unbiasedAverage = (sum - largest - smallest) / 6;
+
+            document.getElementById("results").innerHTML = "The judges average score is <b> " + unbiasedAverage.toFixed(2) + "</b>.";
+        }  
+    </script>
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Abby Chester's Olympic Judging Calculator</h1>
+    </header>
+
+    <p>In this program, you will enter the judge's scores from eight counties.
+        The program will remove the highest and the lowest scores and keep the
+        remaining six. The participant's score will be based on the remaining 6
+        values.
+    </p>
+
+    <form name="myform" action=javascript:getUnbiasedAverage();>
+        <label>Country A Judge:</label>
+        <input type="text" name="judgeA">
+        <br><br>
+        <label>Country B Judge:</label>
+        <input type="text" name="judgeB">
+        <br><br>
+        <label>Country C Judge:</label>
+        <input type="text" name="judgeC">
+        <br><br>
+        <label>Country D Judge:</label>
+        <input type="text" name="judgeD">
+        <br><br>
+        <label>Country E Judge:</label>
+        <input type="text" name="judgeE">
+        <br><br>
+        <label>Country F Judge:</label>
+        <input type="text" name="judgeF">
+        <br><br>
+        <label>County G Judge:</label>
+        <input type="text" name="judgeG">
+        <br><br>
+        <label>Country H Judge:</label>
+        <input type="text" name="judgeH">
+        <br><br>
+        <button id="submit">Compute Score</button>
+    </form>
+
+
+    <div id="results"></div>
+    <br><br>
+    <footer>&copy; 2022 Abby Chester</footer>
+</body>
+
+</html>

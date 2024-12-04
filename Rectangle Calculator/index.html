@@ -1,0 +1,72 @@
+<!--Abby Chester
+CSCI 3300
+10 November 2022-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Abby Chester's Rectangle Calculator</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        let area;
+        let perimeter;
+        let cornerDistance;
+        let height;
+        let width;
+
+        function getArea() {
+            let area = height * width;
+            return area;
+        }
+        function getPerimeter() {
+            let perimeter = height + width * 2;
+            return perimeter;
+        }
+
+        function getOppositeCornerDistance() {
+            let cornerDistance = Math.sqrt(height * height + width * width);
+            return cornerDistance;
+        }
+
+        function reportDetails() {
+            height = document.myform.height.value;
+            height = parseFloat(height);
+            width = document.myform.width.value;
+            width = parseFloat(width);
+            area = getArea(area);
+            perimeter = getPerimeter(perimeter);
+            cornerDistance = getOppositeCornerDistance(cornerDistance);
+            document.getElementById("results").innerHTML = "The area of this rectangle is " + area + " units squared. The perimeter is " + perimeter + " units. The distance between opposite corners is " + cornerDistance.toFixed(2) + " units.";
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Abby Chester's Rectangle Calculator</h1>
+    </header>
+
+    <form name="myform" action="javascript:reportDetails()">
+
+        <label>Height:</label>
+        <input type="text" name="height">
+        <br><br>
+        <label>Width:</label>
+        <input type="text" name="width">
+        <br><br>
+
+        <button id="submit">Report Details</button>
+    </form>
+    <br><br>
+    <div id="results"></div>
+    <br><br>
+    <footer>&copy; 2022 Abby Chester</footer>
+</body>
+
+</html>
