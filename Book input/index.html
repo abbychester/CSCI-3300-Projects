@@ -1,0 +1,83 @@
+<!--
+Abby Chester
+CSCI 3300 
+22 November 2022
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Abby Chester's Book App</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+
+    <div id="bookapp">
+
+        <header>
+            <h1>Abby Chester's Book App</h1>
+        </header>
+
+        <div id="title">
+            <label>Book Title:</label>
+            <input v-model="title">
+        </div>
+        <br><br>
+        <div id="author">
+            <label>Book Author:</label>
+            <input v-model="author">
+        </div>
+        <br><br>
+        <div id="subject">
+            <label>Book Subject:</label>
+            <input v-model="subject">
+        </div>
+        <br><br>
+        <button @click="bookApp">Display</button>
+        <p v-for="book in books">
+            Title: {{book.title}}
+            <br>
+            Author: {{book.author}}
+            <br>
+            Subject: {{book.subject}}
+            <br>
+        </p>
+    </div>
+    <script>
+        const app = {
+            data() {
+                return {
+                    title: " ",
+                    author: " ",
+                    subject: " ",
+                    books: []
+                };
+
+            },
+            methods: {
+                bookApp() {
+                    let book = {
+                        title: this.title,
+                        author: this.author,
+                        subject: this.subject,
+                    }
+                    this.books.push(book)
+
+                }
+            }
+        }
+
+        Vue.createApp(app).mount("#bookapp")
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
