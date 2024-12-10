@@ -1,0 +1,11 @@
+html {
+    background: linear-gradient(to left, rgb(135, 187, 207), rgb(20, 20, 102));
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    width: 500px;
+    padding: 0px;
+    margin: 20px auto;
+}
