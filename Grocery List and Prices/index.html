@@ -1,0 +1,49 @@
+<!--Abby Chester
+CSCI 3300
+20 October 2022-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Abby Chester's Grocery Shopping List</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+
+    <script>     
+    function getGroceryList() {      
+         let itemName = "";
+         let itemPrice = "";
+         itemPrice = parseFloat(itemPrice);
+         let totalPrice = 0;  
+         let list = "<b><table><tr><td>Items:</td><td>Price:</td></tr></b>"; 
+
+            while (true) {
+                itemName = prompt("Enter an item for the grocery list (Enter done to exit) ");
+                if (itemName == "done") {
+                    break
+                }
+                itemPrice = prompt("Enter the price of the item");
+                list += "<tr><td>" + itemName + "</td><td> $" + itemPrice + "</td></tr>";
+                totalPrice += parseFloat(itemPrice);
+
+
+            } document.getElementById("results").innerHTML = list + "<b>The total cost of your grocery list is $" + totalPrice.toFixed(2);
+
+        }
+       </script>
+</head>
+
+<body>
+
+    <header><h1>Abby Chester's Grocery Shopping List</h1></header>
+
+    <button onclick="getGroceryList()">Click here to add items to your grocery list</button>
+    <br><br>
+    <div id="results"></div>
+    <div id="total"></div>
+    <br><br>
+    <footer>&copy; 2022 Abby Chester</footer>
+</body>
+
+</html>
